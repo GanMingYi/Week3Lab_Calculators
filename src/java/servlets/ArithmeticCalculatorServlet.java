@@ -33,27 +33,23 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                 || second == null || second.equals("") || second.matches("[a-zA-Z]+")) {
             request.setAttribute("result", "Invalid");
             getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
-            return;
         } 
         else {
             switch(button) {
                 case "+":
                     request.setAttribute("result", Integer.parseInt(first) + Integer.parseInt(second));
-                    getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
-                    return;
+                    break;
                 case "-":
                     request.setAttribute("result", Integer.parseInt(first) - Integer.parseInt(second));
-                    getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
-                    return;
+                    break;
                 case "*":
                     request.setAttribute("result", Integer.parseInt(first) * Integer.parseInt(second));
-                    getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
-                    return;
+                    break;
                 case "%":
                     request.setAttribute("result", Integer.parseInt(first) % Integer.parseInt(second));
-                    getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
-                    return;
+                    break;
             }
+            getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
         }
     }
 }
