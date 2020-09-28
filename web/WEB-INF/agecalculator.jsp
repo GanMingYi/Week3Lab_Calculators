@@ -11,7 +11,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Age Calculator</title>
     </head>
-    <body>
+    <body style="background-color: #121212; color: aliceblue">
+        <div style="text-align: left; margin-top: 10rem; margin-left: 40%">
         <h1>Age Calculator</h1>
         <form method="post">
             Enter your age: <input type="text" name="userage" value="${userage}"><br>
@@ -19,5 +20,6 @@
         </form>
             <p>${message}</p>
             <a href="arithmetic">Arithmetic Calculator</a>
+        </div>
     </body>
 </html>
